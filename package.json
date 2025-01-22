@@ -1,0 +1,19 @@
+{
+  "name": "node.js-netology",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChernyshevaNetology/nodejs-netology.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChernyshevaNetology/nodejs-netology/issues"
+  },
+  "homepage": "https://github.com/ChernyshevaNetology/nodejs-netology#readme"
+}
