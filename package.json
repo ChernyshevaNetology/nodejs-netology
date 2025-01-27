@@ -1,6 +1,7 @@
 {
   "name": "node.js-netology",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,10 +11,19 @@
     "type": "git",
     "url": "git+https://github.com/ChernyshevaNetology/nodejs-netology.git"
   },
+  "bin": {
+    "num": "./numbers-game.js",
+    "date": "./date.js"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ChernyshevaNetology/nodejs-netology/issues"
   },
-  "homepage": "https://github.com/ChernyshevaNetology/nodejs-netology#readme"
+  "homepage": "https://github.com/ChernyshevaNetology/nodejs-netology#readme",
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "prettier": "^3.4.2",
+    "yargs": "^17.7.2"
+  }
 }
