@@ -6,7 +6,7 @@ const readLineInterFace = readline.createInterface({
   output: process.stdout,
 });
 
-readLineInterFace.setPrompt("Сыграем в ореш и решку, загадайте число 1 или 2 ");
+readLineInterFace.setPrompt("Сыграем в орел и решку, загадайте число 1 или 2 ");
 readLineInterFace.prompt();
 
 async function appendJsonData(newData) {
@@ -14,11 +14,9 @@ async function appendJsonData(newData) {
     const jsonData = await fs.readFile("data.json", { encoding: "utf-8" });
 
     const data = JSON.parse(jsonData);
-    // Append new data to the gamesStats array
     data.gamesStats.push(newData);
 
     await fs.writeFile("data.json", JSON.stringify(data, null, 2));
-    console.log("New data has been appended to data.json");
   } catch (err) {
     console.error("Error processing JSON file:", err);
   }
@@ -47,7 +45,5 @@ readLineInterFace.on("line", (answer) => {
   };
 
   appendJsonData(newData);
-  console.log("newData", newData);
-
   readLineInterFace.prompt();
 });
