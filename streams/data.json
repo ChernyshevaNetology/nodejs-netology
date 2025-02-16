@@ -1,0 +1,249 @@
+{
+  "gamesStats": [
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": 2,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": 2,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": 2,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": 2,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": 2,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 1,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": 1,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 1,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 1,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 1,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": 1,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 2,
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": 1,
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "1",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "2",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "1",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "2",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "teeee",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "trrr",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "trrr clear",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "node index.js",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "2",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "2",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "2",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "rrr",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "rrrrr",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "rrrr",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "jjj",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "jj",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "1",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "1",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "1",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "1",
+      "isWin": true
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 2,
+      "answer": "1",
+      "isWin": false
+    },
+    {
+      "guessedNumber": 1,
+      "answer": "1",
+      "isWin": true
+    }
+  ]
+}
