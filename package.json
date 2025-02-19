@@ -5,12 +5,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node -r dotenv/config.js ./http-weather-app/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ChernyshevaNetology/nodejs-netology.git"
   },
+  "watch": [
+    "library-project-express/index.js"
+  ],
   "bin": {
     "num": "./numbers-game.js",
     "date": "./date.js"
@@ -23,10 +27,13 @@
   "homepage": "https://github.com/ChernyshevaNetology/nodejs-netology#readme",
   "dependencies": {
     "date-fns": "^4.1.0",
+    "express": "^4.21.2",
     "prettier": "^3.4.2",
+    "uuid": "^11.0.5",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
+    "dotenv": "^16.4.7",
     "nodemon": "^3.1.9"
   }
 }
