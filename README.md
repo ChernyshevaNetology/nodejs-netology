@@ -1,8 +1,6 @@
-# MongoDB Examples
+# Примеры для запросов в mongoDb.
 
-Примеры для запросов в mongoDb.
-
-## Вставка более чем одного элемента в коллекцию
+### Вставка более чем одного элемента в коллекцию
 
 ```javascript
 db.books.insertMany([
@@ -17,15 +15,19 @@ db.books.insertMany([
         authors: "Fedor Dostoevsky"
     }
 ]);
+```
 
-## запрос для редактирования полей: description и authors коллекции books по _id записи.
+### запрос для редактирования полей: description и authors коллекции books по _id записи.
 
 ```javascript
 db.books.updateOne(
     { _id: ObjectId("your-id-here") }, 
     { $set: { description: 'new Description', authors: 'Пелевин' } }
 );
+```
 
-## Поиск книги по полю (в примере title)
+### Поиск книги по полю (в примере title)
 
+```javascript
 db.books.find({ title: "Crime and Punishment" });
+```
