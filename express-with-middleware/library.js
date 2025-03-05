@@ -1,10 +1,4 @@
-import express, { json, request, response } from "express";
-import { v4 as uuid } from "uuid";
-
-const PORT = process.env.PORT || 8000;
-console.log("server is running on Port", PORT);
-
-const library = [
+export const library = [
   {
     id: "1",
     title: "To Kill a Mockingbird",
@@ -14,6 +8,7 @@ const library = [
     favorite: true,
     fileCover: "mockingbird_cover.jpg",
     fileName: "to_kill_a_mockingbird.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "2",
@@ -24,6 +19,7 @@ const library = [
     favorite: true,
     fileCover: "1984_cover.jpg",
     fileName: "1984.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "3",
@@ -33,6 +29,7 @@ const library = [
     favorite: true,
     fileCover: "great_gatsby_cover.jpg",
     fileName: "the_great_gatsby.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "4",
@@ -43,6 +40,7 @@ const library = [
     favorite: true,
     fileCover: "pride_and_prejudice_cover.jpg",
     fileName: "pride_and_prejudice.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "5",
@@ -53,6 +51,7 @@ const library = [
     favorite: true,
     fileCover: "catcher_in_the_rye_cover.jpg",
     fileName: "the_catcher_in_the_rye.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "6",
@@ -63,6 +62,7 @@ const library = [
     favorite: true,
     fileCover: "brave_new_world_cover.jpg",
     fileName: "brave_new_world.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "7",
@@ -72,6 +72,7 @@ const library = [
     favorite: false,
     fileCover: "moby_dick_cover.jpg",
     fileName: "moby_dick.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "8",
@@ -82,6 +83,7 @@ const library = [
     favorite: true,
     fileCover: "war_and_peace_cover.jpg",
     fileName: "war_and_peace.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "9",
@@ -92,6 +94,7 @@ const library = [
     favorite: false,
     fileCover: "lotr_cover.jpg",
     fileName: "the_lord_of_the_rings.pdf",
+    fileBook: "1740676189429-images.png",
   },
   {
     id: "10",
@@ -102,111 +105,6 @@ const library = [
     favorite: true,
     fileCover: "alchemist_cover.jpg",
     fileName: "the_alchemist.pdf",
+    fileBook: "1740676189429-images.png",
   },
 ];
-
-const app = express();
-app.use(express.json());
-
-app.get("/api/books", (request, response) => {
-  response.status(200).json(library);
-});
-
-app.get("/api/books/:id", (request, response) => {
-  const {
-    params: { id },
-  } = request;
-
-  const foundBook = library.find((book) => book.id === id);
-
-  if (!foundBook) {
-    return response
-      .status(404)
-      .send({ message: `Книга по id ${id} не найдена` });
-  }
-
-  response.status(200).json(foundBook);
-});
-
-app.post("/api/user/login", (request, response) => {
-  response.status(200).json({ id: 1, mail: "test@mail.ru" });
-});
-
-app.post("/api/books", (request, response) => {
-  const { body } = request;
-  console.log("body", body);
-  const { title, description, authors, favorite, fileCover, fileName } = body;
-  const isFullRequestBody = [
-    title,
-    description,
-    authors,
-    typeof favorite === "boolean",
-    fileCover,
-    fileName,
-  ].every(Boolean);
-
-  if (!isFullRequestBody) {
-    return response
-      .status(403)
-      .json({ error: "Пожалуйста, заполните все поля" });
-  }
-
-  const newBook = {
-    id: uuid(),
-    title,
-    description,
-    authors,
-    favorite,
-    fileCover,
-    fileName,
-  };
-
-  library.push(newBook);
-  response
-    .status(200)
-    .json({ message: "Книга была успешно добавлена" })
-    .json(newBook);
-});
-
-app.delete("/api/books/:id", (request, response) => {
-  const {
-    params: { id },
-  } = request;
-
-  const foundBookIndex = library.findIndex((book) => book.id === id);
-
-  if (foundBookIndex !== -1) {
-    library.splice(foundBookIndex, 1);
-    response.json({ message: `Книга с id ${id} удалена` });
-  } else {
-    response.json({ message: `Не удалось найти книгу с id ${id}` });
-  }
-});
-
-app.put("/api/books/:id", (request, response) => {
-  const { title, description, authors, favorite, fileCover, fileName } =
-    request.body;
-
-  const {
-    params: { id },
-  } = request;
-
-  const bookIndex = library.findIndex((book) => book.id === id);
-
-  if (bookIndex !== -1) {
-    library.splice(bookIndex, 1, {
-      id: id ? id : uuid(),
-      title,
-      description,
-      authors,
-      favorite,
-      fileCover,
-      fileName,
-    });
-    return response.status(200).json({ message: "Книга успешно обновлена" });
-  }
-
-  return response.status(404).json({ error: "Не удалось обновить книгу" });
-});
-
-app.listen(PORT);
